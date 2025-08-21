@@ -51,6 +51,17 @@ console.log(greetUser(" ", false));
 console.log(greetUser("Justin"));
 
 // Type assertion
-const inputEl = document.getElementById("email") as HTMLInputElement;
+// const inputEl = document.getElementById("email") as HTMLInputElement;
+// console.log(inputEl!.value);
 
-console.log(inputEl!.value);
+// Type Guards
+function formatData(a: string | number, b: string | number) {
+  if (typeof a === "number" && typeof b === "number") {
+    console.log(a + b);
+  } else {
+    console.log(`${a} <-> ${b}`);
+  }
+}
+
+formatData(5, 2);
+formatData("5", 10);
