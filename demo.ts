@@ -37,3 +37,15 @@ function movePoint(point: { x: number; y: number }, moveDirection: Directions) {
 
 console.log(movePoint(point, Directions.Up));
 console.log(movePoint(point, Directions.Down));
+
+// Optional params and Return type
+function greetUser(username: string, addHello?: boolean): string {
+  if (addHello) {
+    return `Hello, ${username}`;
+  }
+  return username;
+}
+
+console.log(greetUser("Justin", true));
+console.log(greetUser(" ", false));
+console.log(greetUser("Justin"));
