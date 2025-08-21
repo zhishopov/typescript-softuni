@@ -12,3 +12,28 @@ console.log(age);
 console.log(hasGraduated);
 console.log(skills);
 console.log(certificateInfo);
+
+// Enums
+enum Directions {
+  Up,
+  Down,
+  Left,
+  Right,
+}
+
+const point = { x: 0, y: 0 };
+
+function movePoint(point: { x: number; y: number }, moveDirection: Directions) {
+  if (moveDirection === Directions.Up) {
+    return { x: point.x, y: point.y + 1 };
+  } else if (moveDirection === Directions.Down) {
+    return { x: point.x, y: point.y - 1 };
+  } else if (moveDirection === Directions.Right) {
+    return { x: point.x + 1, y: point.y };
+  } else if (moveDirection === Directions.Left) {
+    return { x: point.x - 1, y: point.y };
+  }
+}
+
+console.log(movePoint(point, Directions.Up));
+console.log(movePoint(point, Directions.Down));
