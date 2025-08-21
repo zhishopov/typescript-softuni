@@ -55,8 +55,12 @@ console.log(greetUser("Justin"));
 // console.log(inputEl!.value);
 
 // Type Guards
+function isNumber(value: string | number): value is number {
+  return typeof value === "number";
+}
+
 function formatData(a: string | number, b: string | number) {
-  if (typeof a === "number" && typeof b === "number") {
+  if (isNumber(a) && isNumber(b)) {
     console.log(a + b);
   } else {
     console.log(`${a} <-> ${b}`);
