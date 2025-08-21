@@ -49,3 +49,8 @@ function greetUser(username: string, addHello?: boolean): string {
 console.log(greetUser("Justin", true));
 console.log(greetUser(" ", false));
 console.log(greetUser("Justin"));
+
+// Type assertion
+const inputEl = document.getElementById("email") as HTMLInputElement;
+
+console.log(inputEl!.value);
